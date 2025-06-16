@@ -133,13 +133,13 @@ const Column: React.FC<Props> = ({
                                 setInputValue('');
                             }}
                         >
-                            Отмена
+                            Abbrechen
                         </button>
                     </div>
                 </>
             ) : (
                 <button style={{ marginTop: 8 }} onClick={() => setShowInput(true)}>
-                    + Добавить задачу
+                    + Aufgabe hinzufügen
                 </button>
             )}
         </div>
