@@ -30,14 +30,14 @@ const Task: React.FC<Props> = ({
     const [newContent, setNewContent] = useState(task.content);
 
     const handleDelete = () => {
-        if (window.confirm('Удалить задачу?')) {
+        if (window.confirm('Aufgabe löschen?')) {
             removeTask(task.id, columnId);
         }
     };
 
     const handleSave = () => {
         if (!newContent.trim()) {
-            alert('Содержимое задачи не может быть пустым!');
+            alert('Der Inhalt der Aufgabe darf nicht leer sein!');
             return;
         }
         editTask(task.id, newContent.trim());
@@ -74,8 +74,8 @@ const Task: React.FC<Props> = ({
                             gap: 8,
                         }}
                     >
-                        <button onClick={handleSave}>💾 Сохранить</button>
-                        <button onClick={() => setEditMode(false)}>✖ Отмена</button>
+                        <button onClick={handleSave}>💾 Speichern</button>
+                        <button onClick={() => setEditMode(false)}>✖ Abbrechen</button>
                     </div>
                 </>
             ) : (
@@ -92,14 +92,14 @@ const Task: React.FC<Props> = ({
                     >
                         <button
                             onClick={() => setEditMode(true)}
-                            title="Редактировать"
+                            title="Bearbeiten"
                             style={{ padding: '2px 6px' }}
                         >
                             ✏️
                         </button>
                         <button
                             onClick={handleDelete}
-                            title="Удалить"
+                            title="Löschen"
                             style={{ padding: '2px 6px', color: 'red', fontWeight: 'bold' }}
                         >
                             ×

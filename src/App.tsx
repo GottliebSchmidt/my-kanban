@@ -20,9 +20,9 @@ type DataType = {
 
 const initialData: DataType = {
     tasks: {
-        'task-1': { id: 'task-1', content: 'Купить хлеб' },
-        'task-2': { id: 'task-2', content: 'Выучить React' },
-        'task-3': { id: 'task-3', content: 'Починить велосипед' },
+        'task-1': { id: 'task-1', content: 'Brot kaufen' },
+        'task-2': { id: 'task-2', content: 'React lernen' },
+        'task-3': { id: 'task-3', content: 'Fahrrad reparieren' },
     },
     columns: {
         'column-1': {
@@ -219,7 +219,7 @@ function App() {
             <div style={{ minWidth: 250, padding: 20 }}>
                 <input
                     type="text"
-                    placeholder="Название новой колонки"
+                    placeholder="Name der neuen Spalte"
                     value={newColumnTitle}
                     onChange={(e) => setNewColumnTitle(e.target.value)}
                     style={{ width: '100%', padding: '6px', marginBottom: '8px' }}
@@ -233,7 +233,7 @@ function App() {
                     }}
                     style={{ width: '100%', padding: '8px' }}
                 >
-                    + Добавить колонку
+                    + Spalte hinzufügen
                 </button>
             </div>
         </div>

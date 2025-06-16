@@ -38,7 +38,7 @@ const Column: React.FC<Props> = ({
 
     const handleAddTask = () => {
         if (!inputValue.trim()) {
-            alert('Задача не может быть пустой');
+            alert('Die Aufgabe darf nicht leer sein.');
             return;
         }
         addTask(inputValue.trim(), column.id);
@@ -49,7 +49,7 @@ const Column: React.FC<Props> = ({
     const handleRemoveColumn = () => {
         if (
             window.confirm(
-                `Удалить колонку "${column.title}"? Все задачи будут удалены!`
+                `Spalte löschen "${column.title}"? Alle Aufgaben werden gelöscht!`
             )
         ) {
             removeColumn(column.id);
@@ -88,7 +88,7 @@ const Column: React.FC<Props> = ({
                         fontWeight: 'bold',
                         lineHeight: 1,
                     }}
-                    title="Удалить колонку"
+                    title="Spalte löschen"
                 >
                     ×
                 </button>
@@ -114,7 +114,7 @@ const Column: React.FC<Props> = ({
                         type="text"
                         value={inputValue}
                         onChange={(e) => setInputValue(e.target.value)}
-                        placeholder="Новая задача"
+                        placeholder="Neue Aufgabe"
                         onKeyDown={(e) => {
                             if (e.key === 'Enter') handleAddTask();
                             if (e.key === 'Escape') {
@@ -126,7 +126,7 @@ const Column: React.FC<Props> = ({
                         autoFocus
                     />
                     <div style={{ marginTop: 8, display: 'flex', gap: 8, justifyContent: 'flex-end' }}>
-                        <button onClick={handleAddTask}>Добавить</button>
+                        <button onClick={handleAddTask}>Hinzufügen</button>
                         <button
                             onClick={() => {
                                 setShowInput(false);
